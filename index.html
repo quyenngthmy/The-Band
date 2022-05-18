@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Band</title>
     <link rel="shortcut icon" href="https://freepngimg.com/download/logo/93798-kpop-logo-square-angle-bts-free-download-image.png" type="image/x-icon">
-    <link rel="stylesheet" href="assests/css/style.css">
+    <link rel="stylesheet" href="/The Band/assests/css/style.css">
+    <link rel="stylesheet" href="/The Band/assests/css/responsive.css">
     <link rel="stylesheet" href="assests/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
 </head>
 <body>
@@ -19,7 +20,7 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         More 
                         <i class="nav-arrow-down fa-solid fa-angle-down"></i>
                     </a>
@@ -32,11 +33,15 @@
             </ul>
             <!-- End: Nav -->
 
-            <!-- Begin: Search button -->
+            <!-- Mobile menu button -->
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Search button -->
             <div class="search-btn">
                 <i class="search-icon fa-solid fa-magnifying-glass"></i>
             </div>
-            <!-- End: Search button -->
         </div>
 
         <div id="slider">
@@ -55,15 +60,15 @@
                     There's no doubt that all the BTS boys are super talented. They write and produce much of their own music and can boast that they're the first band since the Beatles to have three albums reach the number one spot in less than a year. Who's counting numbers, though? What really matters is that the Bangtan Boys work really hard at what they do. They do their best to deliver the absolute best to their fans. Whether it's nailing the choreography for their next performance or releasing a video game with content made specifically for the ARMY, BTS is rarely not working. Their work ethic isn't the only thing that has earned them the admiration of millions of fans. As individuals, they're also just inspiring af and they prove that in every interview and sonf lyric.
                 </p>
                 <div class="row member-list">
-                    <div class="col col-third text-center">
+                    <div class="col col-third s-col-full mt-32 text-center">
                         <p class="member-name">Name</p>
                         <img src="/The Band/assests/img/band/suga.jpg" alt="Name" class="member-img">
                     </div>
-                    <div class="col col-third text-center">
+                    <div class="col col-third s-col-full mt-32 text-center">
                         <p class="member-name">Name</p>
                         <img src="/The Band/assests/img/band/suga.jpg" alt="Name" class="member-img">
                     </div>
-                    <div class="col col-third text-center">
+                    <div class="col col-third s-col-full mt-32 text-center">
                         <p class="member-name">Name</p>
                         <img src="/The Band/assests/img/band/suga.jpg" alt="Name" class="member-img">
                     </div>
@@ -93,31 +98,31 @@
 
                     <!-- Places -->
                     <div class="row places-list">
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt-16">
                             <img src="/The Band/assests/img/places/newyork.png" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2022</p>
                                 <p class="place-desc">There's no doubt that all the BTS boys are super talented.</p>
-                                <a href="#" class="btn">Buy Tickets</a>
+                                <a href="#" class="btn s-full-width">Buy Tickets</a>
                             </div>
                         </div>
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt-16">
                             <img src="/The Band/assests/img/places/paris.png" alt="Paris" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2022</p>
                                 <p class="place-desc">There's no doubt that all the BTS boys are super talented.</p>
-                                <a href="#" class="btn">Buy Tickets</a>
+                                <a href="#" class="btn s-full-width">Buy Tickets</a>
                             </div>
                         </div>
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt-16">
                             <img src="/The Band/assests/img/places/sanfrancisco.png" alt="Sanfracisco" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Fracisco</h3>
                                 <p class="place-time">Sun 29 Nov 2022</p>
                                 <p class="place-desc">There's no doubt that all the BTS boys are super talented.</p>
-                                <a href="#" class="btn">Buy Tickets</a>
+                                <a href="#" class="btn s-full-width">Buy Tickets</a>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -130,7 +135,7 @@
                 <p class="section-sub-heading">Fan? Drop a note!</p>
 
                 <div class="row contact-content">
-                    <div class="col col-half contact-info">
+                    <div class="col col-half s-col-full contact-info">
                         <p><i class="fa-solid fa-location-dot"></i>Chicago, US</p>
                         <p><i class="fa-solid fa-phone"></i>Phone: +00 151515</p>
                         <p><i class="fa-solid fa-envelope"></i>Email: mail@mail.com</p>
@@ -139,10 +144,10 @@
                     <div class="col col-half contact-form">
                         <form action="">
                             <div class="row">
-                                <div class="col col-half">
+                                <div class="col col-half s-col-full">
                                     <input type="text" name="" placeholder="Name" required id="" class="form-control">
                                 </div>
-                                <div class="col col-half">
+                                <div class="col col-half s-col-full s-mt-8">
                                     <input type="email" name="" placeholder="Email" required id="" class="form-control">
                                 </div>
                             </div>
@@ -151,7 +156,7 @@
                                     <input type="text" name="" placeholder="Message" required id="" class="form-control">
                                 </div>
                             </div>
-                            <input class="btn pull-right mt-16" type="submit" value="SEND">
+                            <input class="btn pull-right mt-16 s-full-width" type="submit" value="SEND">
                         </form>
                     </div>
                 </div>
@@ -216,6 +221,35 @@
         </div>
     </div>
 
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight
 
+        // Đóng/mở mobile menu
+        mobileMenu.onclick = function() {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+
+        // Tự động đóng khi chọn menu 
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            
+            menuItem.onclick = function(event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParentMenu) {
+                    event.preventDefault ();
+                } else {
+                    header.style.height = null;
+                }
+            }
+        }
+    </script>
 </body>
 </html>
