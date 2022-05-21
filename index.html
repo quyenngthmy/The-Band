@@ -104,7 +104,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2022</p>
                                 <p class="place-desc">There's no doubt that all the BTS boys are super talented.</p>
-                                <a href="#" class="btn s-full-width">Buy Tickets</a>
+                                <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="col col-third s-col-full mt-16">
@@ -113,7 +113,7 @@
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2022</p>
                                 <p class="place-desc">There's no doubt that all the BTS boys are super talented.</p>
-                                <a href="#" class="btn s-full-width">Buy Tickets</a>
+                                <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="col col-third s-col-full mt-16">
@@ -122,7 +122,7 @@
                                 <h3 class="place-heading">San Fracisco</h3>
                                 <p class="place-time">Sun 29 Nov 2022</p>
                                 <p class="place-desc">There's no doubt that all the BTS boys are super talented.</p>
-                                <a href="#" class="btn s-full-width">Buy Tickets</a>
+                                <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -137,8 +137,8 @@
                 <div class="row contact-content">
                     <div class="col col-half s-col-full contact-info">
                         <p><i class="fa-solid fa-location-dot"></i>Chicago, US</p>
-                        <p><i class="fa-solid fa-phone"></i>Phone: +00 151515</p>
-                        <p><i class="fa-solid fa-envelope"></i>Email: mail@mail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>Phone: <a href="tel:+00 151515">+00 151515</a></p>
+                        <p><i class="fa-solid fa-envelope"></i>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
                         
                     </div>
                     <div class="col col-half contact-form">
@@ -156,7 +156,7 @@
                                     <input type="text" name="" placeholder="Message" required id="" class="form-control">
                                 </div>
                             </div>
-                            <input class="btn pull-right mt-16 s-full-width" type="submit" value="SEND">
+                            <input class="contact-submit-btn btn pull-right mt-16 s-full-width" type="submit" value="SEND">
                         </form>
                     </div>
                 </div>
@@ -182,9 +182,9 @@
         </div>
     </div> 
 
-    <div class="modal">
-        <div class="modal-container">
-            <div class="modal-close">
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
                 <i class="fa-solid fa-xmark"></i>
             </div>
 
@@ -250,6 +250,37 @@
                 }
             }
         }
+    </script>
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalContainer = document.querySelector('.js-modal-container')
+        const modalClose = document.querySelector('.js-modal-close')
+        
+        // Hàm hiển thị modal mua vé (thêm class open vào modal)
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+
+        // Hàm ẩn modal mua vé (bỏ class open vào modal)
+        function hideBuyTickets() {
+            modal.classList.remove('open')
+        }
+
+        // Lặp qua từng thẻ button và nghe hành vi click
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+
+        // Nghe hành vi click vào button close
+        modalClose.addEventListener('click', hideBuyTickets)
+
+        modal.addEventListener('click', hideBuyTickets)
+
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
     </script>
 </body>
 </html>

@@ -37,6 +37,8 @@ html {
     margin-top: 15px;
     border: none;
     text-align: center;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .btn:hover {
@@ -192,7 +194,7 @@ html {
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/The Band/assests/img/slider/slider1.jpg') top center / cover no-repeat;
+    background: url('../img/slider/slider1.jpg') top center / cover no-repeat;
 }
 
 #slider .text-content {
@@ -354,6 +356,7 @@ html {
     max-width: calc(100% - 32px);
     min-height: 200px;
     position: relative;
+    animation: modalFadeIn ease 0.5s;
 }
 
 .modal-header {
@@ -440,6 +443,16 @@ html {
     display: inline-block;
 }
 
+.contact-info a {
+    color: #101aef;
+    opacity: 0.8;
+}
+
+.contact-info a:hover {
+    opacity: 1;
+}
+
+
 .contact-form {
     font-size: 15px;
 }
@@ -484,4 +497,15 @@ html {
 #footer .copyright a {
     color: rgba(0, 0, 0, 0.6);
 
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
